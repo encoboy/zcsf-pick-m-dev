@@ -1,0 +1,509 @@
+// @import "~antd-mobile/dist/antd-mobile.less";
+// @import "./_variable.less";
+@primary-color: #37f;
+
+.icon {
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    vertical-align: -0.15em;
+    fill: currentColor;
+}
+
+.iconAvatar {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: -0.15em;
+    fill: currentColor;
+}
+
+.main-dialog {
+    .ytx-modal-body {
+        padding: 0
+    }
+
+}
+
+.adm-checkbox-content{
+    flex: 1!important;
+    text-align: left;
+}
+
+/* 定义滚动条样式（高宽及背景） */
+::-webkit-scrollbar {
+    width: 5px;
+
+    /* 滚动条宽度， width：对应竖滚动条的宽度  height：对应横滚动条的高度 */
+    // background: #007acc;
+}
+
+/* 定义滚动条轨道（凹槽）样式 */
+// ::-webkit-scrollbar-track {
+// -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+/* 较少使用 */
+// border-radius: 3px;
+// }
+
+// /*定义滑块 样式*/
+::-webkit-scrollbar-thumb {
+    height: 60px;
+    //   /* 滚动条滑块长度 */
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+
+
+.main-panel {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    // border-radius: 6px;
+    // margin:  20px auto;
+    // .main-header {
+    //     width: 100%;
+    //     height: 56px;
+    //     border-bottom: 1px solid #f0f0f0;
+    //     padding: 16px 24px;
+    //     box-sizing: border-box;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+
+    //     .header-txt {
+    //         font-size: 16px;
+    //         font-family: PingFangSC-Medium, PingFang SC;
+    //         font-weight: 500;
+    //         color: #121212;
+    //         line-height: 24px;
+    //     }
+    //     .header-close{
+    //         color: #121212;
+    //         font-size: 20px;
+    //     }
+    // }
+
+    .main-footer{
+        width: 100%;
+        height: .52rem;
+        border-top: 1px solid #f0f0f0;
+        padding: 10px 24px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+
+        .footer-clear {
+            margin-right: 10px;
+        }
+        & > span{
+            font-size: 17px;
+            color: #3377FF;;
+        }
+    }
+
+    .main-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+
+        .left-address-entry {
+            cursor: pointer;
+            margin-top: 8px;
+            // align-items: center;
+          
+            .address-entry {
+                padding: 0px 16px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 56px;
+                border-bottom: 1px solid #F0F0F0;
+                &:last-child{
+                   border-bottom: 8px solid #F0F0F0; 
+                }
+                
+            }
+            .address-info{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                & > span{
+                    font-size: 17px;
+                    margin-left: 12px;
+                    color: #333333;
+                }
+            }
+    
+            // .address-entry:hover {
+            //     padding: 6px 12px;
+            //     background-color: #f0f0f0;
+            //     border-radius: 5px;
+            // }
+    
+            .address-entry-todetail {
+                height: 32px;
+                color: #666;
+                line-height: 32px;
+            }
+    
+            .address-entry-todetail:hover {
+                color: @primary-color;
+            }
+        }
+    
+        .left-recent-contact {
+            padding: 0.16rem 0.16rem 0.16rem;
+            margin-bottom: 0.52rem;
+            height: 5.8rem;
+            overflow-y: scroll;
+            .contactContent {
+                overflow: scroll;
+                max-height: 280px;
+                flex: 1;
+                // height: 100%;
+                // max-height: 130px;
+                padding-right: 22px;
+                // overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+    
+                ::-webkit-scrollbar {
+                    /* 设置滚动条的样式 */
+                    width: 2px;
+                }
+            }
+    
+            .AvatarBox {
+                // margin-right: 8px;
+                // margin-bottom: 8px;
+                margin-left: 0;
+                padding: 4px;
+                color: #333;
+                display: flex;
+                align-items: left;
+                // border: 1px solid #ccc;
+            }
+        }
+    
+        .left-group-name {
+            padding: 0 24px 24px 24px;
+            border-top: 1px solid #f0f0f0;
+    
+            .chooseWrite {
+                color: #ccc;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+.search-panel {
+    flex: 1;
+    height: 100%;
+    margin: 0;
+    .searchinput{
+        padding: 0.12rem 0.16rem 0;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.choose-panel {
+    flex: 1;
+    margin: 0;
+
+    .choose-title {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 24px 8px 24px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .clear-choose-data {
+        width: 40px;
+        color: @primary-color;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .groupLeader {
+        padding: 2px;
+        color: @primary-color;
+        font-size: 12px;
+        background-color: #e5eaed;
+    }
+
+    .choose-main {
+        width: 100%;
+        height: 100%;
+        max-height: 405px;
+        padding: 0 12px 12px 12px;
+        overflow: auto;
+    }
+}
+
+.contactTitle {
+    padding: 16px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.choose-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // height: 40px;
+    padding: 8px 0;
+}
+
+
+.operateUser {
+    height: 40px;
+    line-height: 40px;
+}
+
+.operateUser :hover {
+    color: @primary-color;
+}
+
+.contentInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.userDepartment {
+    max-width: 220px;
+    height: 40px;
+    overflow: hidden;
+    color: #333;
+    font-size: 14px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.userCount {
+    width: 80px;
+    padding-left: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.userInfo {
+    // height: 40px;
+    padding-left: 10px;
+
+    .userName {
+        max-width: 185px;
+        overflow: hidden;
+        color: #333;
+        font-size: 14px;
+        white-space: nowrap;
+        text-align: left;
+        text-overflow: ellipsis;
+    }
+
+    .userDepartName {
+        max-width: 185px;
+        overflow: hidden;
+        color: #999;
+        font-size: 12px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.selected-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+.selected-user:hover {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.detail-content {
+    height: 395px;
+    padding-left: 12px;
+
+    .detail-content-breadcrumb {
+        padding-top: 6px;
+        padding-left: 12px;
+        text-align: left;
+    }
+
+    .detail-select-allUser {
+        padding-top: 16px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        text-align: left;
+    }
+
+    .detail-select-user {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .detail-select-user:hover {
+        padding: 0 12px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+    }
+
+    .detail-infiniteScroll-panel {
+        max-height: 334px;
+        margin-right: 3px;
+        padding-bottom: 12px;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+
+    .detail-select-panel {
+        width: 100%;
+        padding-right: 12px;
+    }
+
+    .detail-search-panel {
+        height: 405px;
+        overflow: scroll;
+    }
+
+    .select-user-check {
+        margin-right: 12px;
+    }
+
+    .detail-panel {
+        min-width: 67px;
+        height: 24px;
+        margin: 8px;
+        padding-left: 12px;
+        overflow: hidden;
+        color: #666;
+        line-height: 24px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-left: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .toDetail {
+        padding: 5px;
+    }
+
+    .detail-panel:hover {
+        color: @primary-color;
+    }
+
+    .detail-panel-disable {
+        min-width: 67px;
+        height: 24px;
+        margin: 8px;
+        padding-left: 12px;
+        color: #bfbfbf;
+        line-height: 24px;
+        border-left: 1px solid #ccc;
+        cursor: none;
+    }
+
+    .disabled {
+        color: #bfbfbf;
+        cursor: none;
+    }
+}
+
+.boy {
+    color: #fff;
+    background-color: @primary-color !important;
+    margin-left: 4px;
+}
+
+.girl {
+    color: #fff;
+    background-color: #F66 !important;
+    margin-left: 4px;
+}
+
+.check-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    flex: 1;
+    border-bottom: 1px solid #F0F0F0;
+    padding: .1rem 0;
+}
+.avatar-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+
+    .avatarName {
+        // margin-left: 10px;
+        color: #333333;
+        font-weight: 400;
+        line-height: .24rem;
+        font-size: 17px;
+    }
+    .avatarDepart{
+        font-size: 13px;
+        font-weight: 400;
+        color: #999999;
+        line-height: 20px;
+    }
+}
+.avatarSize {
+    font-size: 12px;
+}
+
+
+.nodata-panel {
+    margin: 0 auto;
+    padding-top: 20px;
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ytx-modal-body {
+    padding: 0 !important;
+}
+
+.rlyzzjg {
+    background-color: #096;
+}
+
+.myfriend {
+    color: #fff;
+    background-color: #3377FF;
+}
+
+.theme {
+    color: @primary-color;
+}
